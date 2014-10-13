@@ -3,26 +3,13 @@
 num=10
 
 usage_exit() {
-  echo "midl - output the middle part of the file " 2&>1
-  echo "Usage: $0 [OPTION]" 2&>1
+  echo "midl - output the middle part of the STDIN "
+  echo "Usage: $0 [OPTION]"
   echo "
   -n K   output the middle of K lines, instead of the middle 10;
 
   -h     display this help and exit
-
-  More smaller number is preferentially printed.
-
-  * When the line number is odd and -n argument is even.
-  i.e)
-    $ seq 3 | midl -n 2
-    1
-    2
-
-  * When the line number is even and -n argument is odd.
-  i.e)
-    $ seq 4 | midl -n 1
-    2
-  " 2&>1
+  "
   exit 0
 }
 
@@ -34,7 +21,7 @@ do
     n) num=$OPTARG
       ;;
     *)
-      echo "Didn't match anyoption" 2&>1; exit 1;
+       usage_exit; exit 1;
   esac
 done
 
@@ -52,7 +39,7 @@ if [ -p /dev/stdin ]; then
     }
   '
 else
-  echo "STDIN does not exist" 2&>1
+  echo "STDIN does not exist" 2> /dev/stdout
   exit 1
 fi
 

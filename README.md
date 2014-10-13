@@ -6,8 +6,23 @@
 
   *-h*     display this help and exit
 
-  More smaller number is preferentially printed.
+  In default, 10 middle lines are printed
+  i.e)
+```sh
+    $ seq 100 | midl
+    46
+    47
+    48
+    49
+    50
+    51
+    52
+    53
+    54
+    55
+```
 
+  More smaller number is preferentially printed.
   * When the line number is odd and -n argument is even.
   
   i.e)
@@ -23,3 +38,4 @@
 ```sh
     $ seq 4 | midl -n 1
     2
+```
