@@ -12,7 +12,7 @@
   
   i.e)
 ```sh
-    $ seq 3 | mid -n 2
+    $ seq 3 | midl -n 2
     1
     2
 ```
@@ -21,5 +21,5 @@
   
   i.e)
 ```sh
-    $ seq 4 | mid -n 1
+    $ seq 4 | midl -n 1
     2
