@@ -6,7 +6,7 @@ usage_exit() {
   echo "midd - output the middle part of the file " 2&>1
   echo "Usage: $0 [OPTION]" 2&>1
   echo "
-  -n     output the middle of K lines, instead of the middle 10;
+  -n K   output the middle of K lines, instead of the middle 10;
 
   -h     display this help and exit
 
@@ -44,6 +44,8 @@ if [ -p /dev/stdin ]; then
     END{
       $b=($. / 2 - ('$num' / 2 )) + 1;
       $e=($. / 2 + ('$num' / 2));
+      $b = 1  if $b < 1 ;
+      $e = $. if $e > $.;
       for my $i ($b..$e) {
         print $a[$i]
       }
