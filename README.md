@@ -1,6 +1,6 @@
 ## About
-### midd - output the middle part of the file
-#### Usage: midd [OPTION]
+### midl - output the middle part of the file
+#### Usage: midl [OPTION]
 
   *-n*     output the middle of K lines, instead of the middle 10;
 
