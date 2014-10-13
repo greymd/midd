@@ -7,6 +7,7 @@
   *-h*     display this help and exit
 
   In default, 10 middle lines are printed
+
   i.e)
 ```sh
     $ seq 100 | midl
